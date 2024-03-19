@@ -1,8 +1,25 @@
-wdhwodav
+#Abbey Godfrey, Nyah Dedeaux, Kralyn Thomas
 
+#semester project
+#CKAU weekly operations optimization
 
+#import statements
+from gurobipy import *
 
-wadwd
-
-
-wd
+def CKAUIP():
+    options = {
+    "WLSACCESSID": "4e2e757f-fc63-4b61-82d3-c01c0fb768a4",
+    "WLSSECRET": "92378fbe-2013-42c2-9034-19b61745cc87",
+    "LICENSEID": 2462838}
+    
+    with Env(params=options) as env, Model(env=env) as mod:
+            mod=Model("CKAUIP")
+            
+            #x1=mod.addVar(obj = 15, vtype = "I", name = "cake 1")
+            #x2=mod.addVar(obj = 20, vtype = "I", name = "cake 2")
+            #x3=mod.addVar(obj = 10, vtype = "I", name = "cake 3")
+            #y=mod.addVar(obj=1, vtype="B", name = "logic")
+            
+            mod.update()
+            
+            varList = [x1, x2, x3]
